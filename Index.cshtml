@@ -1,0 +1,94 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<table class="table table-bordered table-striped" >
+    <tr>
+        <th>Age</th>
+        <th>Attrition</th>
+        <th>BusinessTravel</th>
+        <th>DailyRate</th>
+        <th>Department</th>
+        <th>DistanceFromHome</th>
+        <th>EducationField</th>
+        <th>EmployeeCount</th>
+        <th>EmployeeNumber</th>
+        <th>EnviromentSatisfaction</th>
+        <th>Gender</th>
+        <th>HourlyRate</th>
+        <th>JobInvolvement</th>
+        <th>JobLevel</th>
+        <th>JobRole</th>
+        <th>JobSatisfaction</th>
+        <th>MaritalStatus</th>
+        <th>MonthlyIncome</th>
+        <th>MonthlyRate</th>
+        <th>NumCompaniesWorked</th>
+        <th>Over18</th>
+        <th>OverTime</th>
+        <th>PercentSalaryHike</th>
+        <th>PerformanceRating</th>
+        <th>RelationshipSatisfaction</th>
+        <th>StandardHours</th>
+        <th>StockOptionLevel</th>
+        <th>TotalWorkingYears</th>
+        <th>TrainingTimesLastYear</th>
+        <th>WorkLifeBalance</th>
+        <th>YearsAtCompany</th>
+        <th>YearsInCurrentRole</th>
+        <th>YearsSinceLastPromotion</th>
+        <th>YearsWithCurrManager</th>
+        
+
+        
+    </tr>
+
+    @for (int i = 0; i < Model.Rows.Count; i++)
+    {
+        <tr>
+            <td>@Model.Rows[i][1]</td>
+            <td>@Model.Rows[i][2]</td>
+            <td>@Model.Rows[i][3]</td>
+            <td>@Model.Rows[i][4]</td>
+            <td>@Model.Rows[i][5]</td>
+            <td>@Model.Rows[i][6]</td>
+            <td>@Model.Rows[i][7]</td>
+            <td>@Model.Rows[i][8]</td>
+            <td>@Model.Rows[i][9]</td>
+            <td>@Model.Rows[i][10]</td>
+            <td>@Model.Rows[i]11]</td>
+            <td>@Model.Rows[i][12]</td>
+            <td>@Model.Rows[i][13]</td>
+            <td>@Model.Rows[i][14]</td>
+            <td>@Model.Rows[i][15]</td>
+            <td>@Model.Rows[i][16]</td>
+            <td>@Model.Rows[i][17]</td>
+            <td>@Model.Rows[i][18]</td>
+            <td>@Model.Rows[i][19]</td>
+            <td>@Model.Rows[i][20]</td>
+            <td>@Model.Rows[i][21]</td>
+            <td>@Model.Rows[i][22]</td>
+            <td>@Model.Rows[i][23]</td>
+            <td>@Model.Rows[i][24]</td>
+            <td>@Model.Rows[i][25]</td>
+            <td>@Model.Rows[i][26]</td>
+            <td>@Model.Rows[i][27]</td>
+            <td>@Model.Rows[i][28]</td>
+            <td>@Model.Rows[i][29]</td>
+            <td>@Model.Rows[i][30]</td>
+            <td>@Model.Rows[i][31]</td>
+            <td>@Model.Rows[i][32]</td>
+            <td>@Model.Rows[i][33]</td>
+            
+           
+            <td>
+                <a href="@Url.Action("Edit", "Product", new {@id=@Model.Rows[i][33] })">Edit</a>
+                <a href="@Url.Action("Delete", "Product", new {@id=@Model.Rows[i][33] })">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="@Url.Action("Create","Product")">Add Product</a>
